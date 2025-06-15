@@ -35,6 +35,7 @@
     </section>
 
     <section id="practice">
+    
         <h2>Дасгал</h2>
         <p>Дасгал хийх хэсэг энд байна...</p>
     </section>
@@ -49,3 +50,62 @@
     </footer>
 </body>
 </html>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+document.addEventListener("DOMContentLoaded", function() {
+    const vocabLinks = document.querySelectorAll('#vocab a');
+    vocabLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Энэ хэсэг нь TOPIK 3, 4, 5-ийн үгсийг агуулна!');
+        });
+    });
+
+    const testLinks = document.querySelectorAll('#test a');
+    testLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Шалгалтын бодлогын хэсэг');
+        });
+    });
+});
